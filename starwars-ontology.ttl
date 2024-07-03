@@ -1,0 +1,844 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<https://swapi.co/vocabulary/Aleena> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Reptile>;
+  rdfs:label "Aleena";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>;
+  <https://swapi.co/vocabulary/skinColor> "blue", "gray";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/aleena/47>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/38>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 80.0;
+  <https://swapi.co/vocabulary/averageLifespan> "79";
+  <https://swapi.co/vocabulary/language> "Aleena" .
+
+<https://swapi.co/vocabulary/Character> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/film> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/gender> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/height> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/homeworld> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/mass> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/skinColor> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Besalisk> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Amphibian>;
+  rdfs:label "Besalisk";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/5>;
+  <https://swapi.co/vocabulary/skinColor> "brown";
+  <https://swapi.co/vocabulary/eyeColor> "yellow";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/besalisk/71>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/55>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 178.0;
+  <https://swapi.co/vocabulary/averageLifespan> "75";
+  <https://swapi.co/vocabulary/language> "besalisk" .
+
+<https://swapi.co/vocabulary/eyeColor> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Cerean> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Cerean";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "pale pink";
+  <https://swapi.co/vocabulary/eyeColor> "hazel";
+  <https://swapi.co/vocabulary/hairColor> "white", "red", "black", "blond";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/cerean/52>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/43>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 200.0;
+  <https://swapi.co/vocabulary/language> "Cerean" .
+
+<https://swapi.co/vocabulary/birthYear> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/desc> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/hairColor> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/wikidataLink> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Chagrian> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Amphibian>;
+  rdfs:label "Chagrian";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "blue";
+  <https://swapi.co/vocabulary/eyeColor> "blue";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/chagrian/59>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/50>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 190.0;
+  <https://swapi.co/vocabulary/language> "Chagria" .
+
+<https://swapi.co/vocabulary/Clawdite> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Reptilian>;
+  rdfs:label "Clawdite";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/5>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "yellow", "green";
+  <https://swapi.co/vocabulary/eyeColor> "yellow";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/clawdite/70>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/54>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 180.0;
+  <https://swapi.co/vocabulary/averageLifespan> "70";
+  <https://swapi.co/vocabulary/language> "Clawdite" .
+
+<https://swapi.co/vocabulary/image> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/vehicle> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Droid> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Artificial>;
+  rdfs:label "Droid";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/5>,
+    <https://swapi.co/resource/film/6>, <https://swapi.co/resource/film/2>, <https://swapi.co/resource/film/3>,
+    <https://swapi.co/resource/film/1>, <https://swapi.co/resource/film/7>;
+  <https://swapi.co/vocabulary/desc> "A droid is a fictional robot possessing some degree of artificial intelligence in the Star Wars science fiction franchise. Coined by special effects artist John Stears, the term is a clipped form of \"android\", a word originally reserved for robots designed to look and act like a human. The word \"droid\" has been a registered trademark of Lucasfilm Ltd since 1977.";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/droid/23>, <https://swapi.co/resource/droid/2>,
+    <https://swapi.co/resource/droid/3>, <https://swapi.co/resource/droid/87>, <https://swapi.co/resource/droid/8>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageLifespan> "indefinite" .
+
+<https://swapi.co/vocabulary/degree> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Dug> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Dug";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>;
+  <https://swapi.co/vocabulary/skinColor> "grey", "brown", "red", "purple";
+  <https://swapi.co/vocabulary/eyeColor> "blue", "yellow";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/dug/41>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/35>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 100.0;
+  <https://swapi.co/vocabulary/language> "Dugese" .
+
+<https://swapi.co/vocabulary/Ewok> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Ewok";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/3>;
+  <https://swapi.co/vocabulary/skinColor> "brown";
+  <https://swapi.co/vocabulary/eyeColor> "brown", "orange";
+  <https://swapi.co/vocabulary/desc> "Ewoks are a fictional race of small, mammaloid bipeds that appear in the Star Wars universe. They are hunter-gatherers resembling teddy bears that inhabit the forest moon of Endor and live in various arboreal huts and other simple dwellings. They first appeared in the 1983 film Return of the Jedi and have since appeared in two made-for-television films, Caravan of Courage: An Ewok Adventure (1984) and Ewoks: The Battle for Endor (1985), as well as a short-lived animated series and several books and games.";
+  <https://swapi.co/vocabulary/hairColor> "brown", "white", "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/ewok/30>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/7>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 100.0;
+  <https://swapi.co/vocabulary/language> "Ewokese" .
+
+<https://swapi.co/vocabulary/Film> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/boxOffice> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/character> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/cost> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/episodeId> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/location> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/openingCrawl> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/planet> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/releaseDate> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/returnOnInvestment> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/starship> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Geonosian> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Insectoid>;
+  rdfs:label "Geonosian";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/5>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "brown", "green";
+  <https://swapi.co/vocabulary/eyeColor> "green", "hazel";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/geonosian/63>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/11>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 178.0;
+  <https://swapi.co/vocabulary/language> "Geonosian" .
+
+<https://swapi.co/vocabulary/Gungan> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Amphibian>;
+  rdfs:label "Gungan";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/5>;
+  <https://swapi.co/vocabulary/skinColor> "brown", "green";
+  <https://swapi.co/vocabulary/eyeColor> "orange";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/gungan/38>, <https://swapi.co/resource/gungan/37>,
+    <https://swapi.co/resource/gungan/36>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/8>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 190.0;
+  <https://swapi.co/vocabulary/language> "Gungan basic" .
+
+<https://swapi.co/vocabulary/Human> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Human";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/5>,
+    <https://swapi.co/resource/film/6>, <https://swapi.co/resource/film/2>, <https://swapi.co/resource/film/3>,
+    <https://swapi.co/resource/film/1>, <https://swapi.co/resource/film/7>;
+  <https://swapi.co/vocabulary/skinColor> "black", "caucasian", "asian", "hispanic";
+  <https://swapi.co/vocabulary/eyeColor> "blue", "grey", "brown", "green", "hazel",
+    "amber";
+  <https://swapi.co/vocabulary/desc> "Modern humans (Homo sapiens, primarily ssp. Homo sapiens sapiens) are the only extant members of the subtribe Hominina, a branch of the tribe Hominini belonging to the family of great apes. They are characterized by erect posture and bipedal locomotion; high manual dexterity and heavy tool use compared to other animals; and a general trend toward larger, more complex brains and societies.34, Early hominins—particularly the australopithecines, whose brains and anatomy are in many ways more similar to ancestral non-human apes—are less often referred to as \"human\" than hominins of the genus Homo. Several of these hominins used fire, occupied much of Eurasia, and gave rise to anatomically modern Homo sapiens in Africa about 200,000 years ago. They began to exhibit evidence of behavioral modernity around 50,000 years ago. In several waves of migration, anatomically modern humans ventured out of Africa and populated most of the world. The spread of humans and their large and increasing population has had a profound impact on large areas of the environment and millions of native species worldwide. Advantages that explain this evolutionary success include a relatively larger brain with a particularly well-developed neocortex, prefrontal cortex and temporal lobes, which enable high levels of abstract reasoning, language, problem solving, sociality, and culture through social learning. Humans use tools to a much higher degree than any other animal, are the only extant species known to build fires and cook their food, and are the only extant species to clothe themselves and create and use numerous other technologies and arts. Humans are uniquely adept at using systems of symbolic communication (such as language and art) for self-expression and the exchange of ideas, and for organizing themselves into purposeful groups. Humans create complex social structures composed of many cooperating and competing groups, from families and kinship networks to political states. Social interactions between humans have established an extremely wide variety of values, social norms, and rituals, which together form the basis of human society. Curiosity and the human desire to understand and influence the environment and to explain and manipulate phenomena (or events) has provided the foundation for developing science, philosophy, mythology, religion, anthropology, and numerous other fields of knowledge. Though most of human existence has been sustained by hunting and gathering in band societies, increasing numbers of human societies began to practice sedentary agriculture approximately some 10,000 years ago, domesticating plants and animals, thus allowing for the growth of civilization. These human societies subsequently expanded in size, establishing various forms of government, religion, and culture around the world, unifying people within regions to form states and empires. The rapid advancement of scientific and medical understanding in the 19th and 20th centuries led to the development of fuel-driven technologies and increased lifespans, causing the human population to rise exponentially. Today the global human population is estimated by the United Nations to be near 7.6 billion.";
+  <https://swapi.co/vocabulary/hairColor> "brown", "blonde", "red", "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/human/10>, <https://swapi.co/resource/human/5>,
+    <https://swapi.co/resource/human/4>, <https://swapi.co/resource/human/12>, <https://swapi.co/resource/human/9>,
+    <https://swapi.co/resource/human/7>, <https://swapi.co/resource/human/1>, <https://swapi.co/resource/human/6>,
+    <https://swapi.co/resource/human/14>, <https://swapi.co/resource/human/19>, <https://swapi.co/resource/human/18>,
+    <https://swapi.co/resource/human/81>, <https://swapi.co/resource/human/25>, <https://swapi.co/resource/human/22>,
+    <https://swapi.co/resource/human/26>, <https://swapi.co/resource/human/21>, <https://swapi.co/resource/human/28>,
+    <https://swapi.co/resource/human/29>, <https://swapi.co/resource/human/43>, <https://swapi.co/resource/human/34>,
+    <https://swapi.co/resource/human/35>, <https://swapi.co/resource/human/11>, <https://swapi.co/resource/human/32>,
+    <https://swapi.co/resource/human/51>, <https://swapi.co/resource/human/62>, <https://swapi.co/resource/human/68>,
+    <https://swapi.co/resource/human/69>, <https://swapi.co/resource/human/60>, <https://swapi.co/resource/human/66>,
+    <https://swapi.co/resource/human/61>, <https://swapi.co/resource/human/67>, <https://swapi.co/resource/human/74>,
+    <https://swapi.co/resource/human/85>, <https://swapi.co/resource/human/86>, <https://swapi.co/resource/human/84>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/9>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 180.0;
+  <https://swapi.co/vocabulary/averageLifespan> "120";
+  <https://swapi.co/vocabulary/language> "Galactic Basic" .
+
+<https://swapi.co/vocabulary/cybernetics> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Hutt> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Gastropod>;
+  rdfs:label "Hutt";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/3>, <https://swapi.co/resource/film/1>;
+  <https://swapi.co/vocabulary/skinColor> "brown", "green", "tan";
+  <https://swapi.co/vocabulary/eyeColor> "yellow", "red";
+  <https://swapi.co/vocabulary/desc> "The Hutts are a fictional alien race in the Star Wars universe. They appear in The Phantom Menace, Return of the Jedi and The Clone Wars, as well as the special edition release of A New Hope. They also appear in various Star Wars games, including those based on the movies, and the Knights of the Old Republic series. None of these are very friendly and all are criminally involved. In the comic book series Tales of the Jedi: Golden Age of the Sith and Tales of the Jedi: The Fall of the Sith Empire, however, there is a Hutt character named Aarrba who is sympathetic to the main characters, Gav and Jori Daragon.";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/hutt/16>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/24>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 300.0;
+  <https://swapi.co/vocabulary/averageLifespan> "1000";
+  <https://swapi.co/vocabulary/language> "Huttese" .
+
+<https://swapi.co/vocabulary/Iktotchi> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Unknown>;
+  rdfs:label "Iktotchi";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "pink";
+  <https://swapi.co/vocabulary/eyeColor> "orange";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/iktotchi/56>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/47>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 180.0;
+  <https://swapi.co/vocabulary/language> "Iktotchese" .
+
+<https://swapi.co/vocabulary/Kaleesh> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Reptile>;
+  rdfs:label "Kaleesh";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "brown", "orange", "tan";
+  <https://swapi.co/vocabulary/eyeColor> "yellow";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/kaleesh/79>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/59>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 170.0;
+  <https://swapi.co/vocabulary/averageLifespan> "80";
+  <https://swapi.co/vocabulary/language> "Kaleesh" .
+
+<https://swapi.co/vocabulary/Kaminoan> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Amphibian>;
+  rdfs:label "Kaminoan";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/5>;
+  <https://swapi.co/vocabulary/skinColor> "blue", "grey";
+  <https://swapi.co/vocabulary/eyeColor> "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/kaminoan/73>, <https://swapi.co/resource/kaminoan/72>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/10>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 220.0;
+  <https://swapi.co/vocabulary/averageLifespan> "80";
+  <https://swapi.co/vocabulary/language> "Kaminoan" .
+
+<https://swapi.co/vocabulary/Keldor> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Unknown>;
+  rdfs:label "Keldor";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "red", "orange", "peach";
+  <https://swapi.co/vocabulary/eyeColor> "silver", "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/keldor/58>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/49>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 180.0;
+  <https://swapi.co/vocabulary/averageLifespan> "70";
+  <https://swapi.co/vocabulary/language> "Kel Dor" .
+
+<https://swapi.co/vocabulary/Mirialan> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Mirialan";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/5>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "yellow", "green";
+  <https://swapi.co/vocabulary/eyeColor> "blue", "yellow", "brown", "green", "red",
+    "orange";
+  <https://swapi.co/vocabulary/hairColor> "brown", "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/mirialan/64>, <https://swapi.co/resource/mirialan/65>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/51>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 180.0;
+  <https://swapi.co/vocabulary/language> "Mirialan" .
+
+<https://swapi.co/vocabulary/Moncalamari> a <https://swapi.co/vocabulary/Species>,
+    owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Amphibian>;
+  rdfs:label "Moncalamari";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/3>;
+  <https://swapi.co/vocabulary/skinColor> "blue", "brown", "red", "magenta";
+  <https://swapi.co/vocabulary/eyeColor> "yellow";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/moncalamari/27>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/31>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 160.0;
+  <https://swapi.co/vocabulary/language> "Mon Calamarian" .
+
+<https://swapi.co/vocabulary/Muun> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Muun";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/5>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "grey", "white";
+  <https://swapi.co/vocabulary/eyeColor> "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/muun/77>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/57>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 190.0;
+  <https://swapi.co/vocabulary/averageLifespan> "100";
+  <https://swapi.co/vocabulary/language> "Muun" .
+
+<https://swapi.co/vocabulary/Nautolan> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Amphibian>;
+  rdfs:label "Nautolan";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>;
+  <https://swapi.co/vocabulary/skinColor> "blue", "brown", "green", "red";
+  <https://swapi.co/vocabulary/eyeColor> "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/nautolan/53>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/44>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 180.0;
+  <https://swapi.co/vocabulary/averageLifespan> "70";
+  <https://swapi.co/vocabulary/language> "Nautila" .
+
+<https://swapi.co/vocabulary/Neimodian> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Unknown>;
+  rdfs:label "Neimodian";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>;
+  <https://swapi.co/vocabulary/skinColor> "grey", "green";
+  <https://swapi.co/vocabulary/eyeColor> "red", "pink";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/neimodian/33>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/18>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 180.0;
+  <https://swapi.co/vocabulary/language> "Neimoidia" .
+
+<https://swapi.co/vocabulary/Pauan> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Pauan";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "grey";
+  <https://swapi.co/vocabulary/eyeColor> "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/pauan/83>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/12>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 190.0;
+  <https://swapi.co/vocabulary/averageLifespan> "700";
+  <https://swapi.co/vocabulary/language> "Utapese" .
+
+<https://swapi.co/vocabulary/Planet> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/climate> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/diameter> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/gravity> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/orbitalPeriod> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/population> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/resident> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/rotationPeriod> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/surfaceWater> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/terrain> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Quermian> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Quermian";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "white";
+  <https://swapi.co/vocabulary/eyeColor> "yellow";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/quermian/57>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/48>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 240.0;
+  <https://swapi.co/vocabulary/averageLifespan> "86";
+  <https://swapi.co/vocabulary/language> "Quermian" .
+
+<https://swapi.co/vocabulary/Rodian> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Reptilian>;
+  rdfs:label "Rodian";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/1>;
+  <https://swapi.co/vocabulary/skinColor> "blue", "green";
+  <https://swapi.co/vocabulary/eyeColor> "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/rodian/15>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/23>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 170.0;
+  <https://swapi.co/vocabulary/language> "Galactic Basic" .
+
+<https://swapi.co/vocabulary/Skakoan> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Skakoan";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/5>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "grey", "green";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/skakoan/76>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/56>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/language> "Skakoan" .
+
+<https://swapi.co/vocabulary/Starship> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/cargoCapacity> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/consumables> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/costInCredits> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/crew> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/hyperdriveRating> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/length> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/manufacturer> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/maxAtmospheringSpeed> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/mglt> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/model> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/passengers> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/pilot> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/starshipClass> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Sullustan> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Sullustan";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/3>;
+  <https://swapi.co/vocabulary/skinColor> "pale";
+  <https://swapi.co/vocabulary/eyeColor> "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/sullustan/31>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/33>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 180.0;
+  <https://swapi.co/vocabulary/language> "Sullutese" .
+
+<https://swapi.co/vocabulary/Tholothian> a <https://swapi.co/vocabulary/Species>,
+    owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Tholothian";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "dark";
+  <https://swapi.co/vocabulary/eyeColor> "blue", "indigo";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/tholothian/55>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/46>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Togruta> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Togruta";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/5>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "blue", "yellow", "white", "green", "red",
+    "orange";
+  <https://swapi.co/vocabulary/eyeColor> "blue", "yellow", "green", "red", "black",
+    "orange";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/togruta/78>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/58>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 180.0;
+  <https://swapi.co/vocabulary/averageLifespan> "94";
+  <https://swapi.co/vocabulary/language> "Togruti" .
+
+<https://swapi.co/vocabulary/Toong> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Unknown>;
+  rdfs:label "Toong";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/6>;
+  <https://swapi.co/vocabulary/skinColor> "grey", "yellow", "green";
+  <https://swapi.co/vocabulary/eyeColor> "orange";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/toong/50>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/41>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 200.0;
+  <https://swapi.co/vocabulary/language> "Tundan" .
+
+<https://swapi.co/vocabulary/Toydarian> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Toydarian";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/5>;
+  <https://swapi.co/vocabulary/skinColor> "blue", "grey", "green";
+  <https://swapi.co/vocabulary/eyeColor> "yellow";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/toydarian/40>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/34>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 120.0;
+  <https://swapi.co/vocabulary/averageLifespan> "91";
+  <https://swapi.co/vocabulary/language> "Toydarian" .
+
+<https://swapi.co/vocabulary/Trandoshan> a <https://swapi.co/vocabulary/Species>,
+    owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Reptile>;
+  rdfs:label "Trandoshan";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/2>;
+  <https://swapi.co/vocabulary/skinColor> "brown", "green";
+  <https://swapi.co/vocabulary/eyeColor> "yellow", "orange";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/trandoshan/24>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/29>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 200.0;
+  <https://swapi.co/vocabulary/language> "Dosh" .
+
+<https://swapi.co/vocabulary/Twilek> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Twilek";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/5>,
+    <https://swapi.co/resource/film/6>, <https://swapi.co/resource/film/3>;
+  <https://swapi.co/vocabulary/skinColor> "blue", "yellow", "green", "orange", "tan",
+    "pink", "purple";
+  <https://swapi.co/vocabulary/eyeColor> "blue", "brown", "orange", "pink";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/twilek/45>, <https://swapi.co/resource/twilek/46>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/37>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 200.0;
+  <https://swapi.co/vocabulary/language> "Twi'leki" .
+
+<https://swapi.co/vocabulary/Umbaran> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Umbaran";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/1>;
+  <https://swapi.co/vocabulary/skinColor> "pale blue";
+  <https://swapi.co/vocabulary/eyeColor> "colourless";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/rodian/15>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/60>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 170.0;
+  <https://swapi.co/vocabulary/language> "Umbaran" .
+
+<https://swapi.co/vocabulary/Vehicle> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/vehicleClass> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Vulptereen> a <https://swapi.co/vocabulary/Species>,
+    owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Unknown>;
+  rdfs:label "Vulptereen";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>;
+  <https://swapi.co/vocabulary/skinColor> "grey";
+  <https://swapi.co/vocabulary/eyeColor> "yellow";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/vulptereen/48>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/39>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 100.0;
+  <https://swapi.co/vocabulary/language> "vulpterish" .
+
+<https://swapi.co/vocabulary/Wookiee> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Wookiee";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/6>, <https://swapi.co/resource/film/2>,
+    <https://swapi.co/resource/film/3>, <https://swapi.co/resource/film/1>, <https://swapi.co/resource/film/7>;
+  <https://swapi.co/vocabulary/skinColor> "gray";
+  <https://swapi.co/vocabulary/eyeColor> "blue", "yellow", "brown", "green", "red",
+    "golden";
+  <https://swapi.co/vocabulary/desc> "Wookiees (/ˈwʊkiːz/) are a fictional species of intelligent bipeds from the planet Kashyyyk in the Star Wars universe. They are taller, stronger, and hairier than humans and most (if not all) other humanoid species. The most notable Wookiee is Chewbacca, the copilot of Han Solo, who first appeared in the 1977 film Star Wars Episode IV: A New Hope.";
+  <https://swapi.co/vocabulary/hairColor> "brown", "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/wookiee/13>, <https://swapi.co/resource/wookiee/80>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/14>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 210.0;
+  <https://swapi.co/vocabulary/averageLifespan> "400";
+  <https://swapi.co/vocabulary/language> "Shyriiwook" .
+
+<https://swapi.co/vocabulary/Xexto> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Unknown>;
+  rdfs:label "Xexto";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>;
+  <https://swapi.co/vocabulary/skinColor> "grey", "yellow", "purple";
+  <https://swapi.co/vocabulary/eyeColor> "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/xexto/49>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/40>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 125.0;
+  <https://swapi.co/vocabulary/language> "Xextese" .
+
+<https://swapi.co/vocabulary/Yodasspecies> a <https://swapi.co/vocabulary/Species>,
+    owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Yodasspecies";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>, <https://swapi.co/resource/film/5>,
+    <https://swapi.co/resource/film/6>, <https://swapi.co/resource/film/2>, <https://swapi.co/resource/film/3>;
+  <https://swapi.co/vocabulary/skinColor> "yellow", "green";
+  <https://swapi.co/vocabulary/eyeColor> "yellow", "brown", "green";
+  <https://swapi.co/vocabulary/hairColor> "brown", "white";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/yodasspecies/20>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/28>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 66.0;
+  <https://swapi.co/vocabulary/averageLifespan> "900";
+  <https://swapi.co/vocabulary/language> "Galactic basic" .
+
+<https://swapi.co/vocabulary/Zabrak> a <https://swapi.co/vocabulary/Species>, owl:Class;
+  rdfs:subClassOf <https://swapi.co/vocabulary/Sentient>, <https://swapi.co/vocabulary/Mammal>;
+  rdfs:label "Zabrak";
+  <https://swapi.co/vocabulary/film> <https://swapi.co/resource/film/4>;
+  <https://swapi.co/vocabulary/skinColor> "yellow", "brown", "pale", "red", "orange";
+  <https://swapi.co/vocabulary/eyeColor> "brown", "orange";
+  <https://swapi.co/vocabulary/hairColor> "black";
+  <https://swapi.co/vocabulary/character> <https://swapi.co/resource/zabrak/44>, <https://swapi.co/resource/zabrak/54>;
+  <https://swapi.co/vocabulary/planet> <https://swapi.co/resource/planet/45>;
+  rdfs:isDefinedBy <https://swapi.co/ontology/>;
+  <https://swapi.co/vocabulary/averageHeight> 180.0;
+  <https://swapi.co/vocabulary/language> "Zabraki" .
+
+<https://swapi.co/vocabulary/Species> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/averageHeight> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/averageLifespan> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/language> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Location> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Country> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Award> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/Person> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/AwardRecognition> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/FilmRole> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/FilmRelease> a owl:Class;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/awardDate> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/awardStatus> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/role> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/forWork> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/birthDate> a owl:DatatypeProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/person> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/residentOf> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/country> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/birthPlace> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/award> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<https://swapi.co/vocabulary/citizenOf> a owl:ObjectProperty;
+  rdfs:isDefinedBy <https://swapi.co/ontology/> .
+
+<http://www.w3.org/2000/01/rdf-schema#> a owl:Ontology ;
+  dc:title "The RDF Schema vocabulary (RDFS)" .
+
+rdfs:Resource a rdfs:Class ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "Resource" ;
+  rdfs:comment "The class resource, everything." .
+
+rdfs:Class a rdfs:Class ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "Class" ;
+  rdfs:comment "The class of classes." ;
+  rdfs:subClassOf rdfs:Resource .
+
+rdfs:subClassOf a rdf:Property ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "subClassOf" ;
+  rdfs:comment "The subject is a subclass of a class." ;
+  rdfs:range rdfs:Class ;
+  rdfs:domain rdfs:Class .
+
+rdfs:subPropertyOf a rdf:Property ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "subPropertyOf" ;
+  rdfs:comment "The subject is a subproperty of a property." ;
+  rdfs:range rdf:Property ;
+  rdfs:domain rdf:Property .
+
+rdfs:comment a rdf:Property ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "comment" ;
+  rdfs:comment "A description of the subject resource." ;
+  rdfs:domain rdfs:Resource ;
+  rdfs:range rdfs:Literal .
+
+rdfs:label a rdf:Property ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "label" ;
+  rdfs:comment "A human-readable name for the subject." ;
+  rdfs:domain rdfs:Resource ;
+  rdfs:range rdfs:Literal .
+
+rdfs:domain a rdf:Property ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "domain" ;
+  rdfs:comment "A domain of the subject property." ;
+  rdfs:range rdfs:Class ;
+  rdfs:domain rdf:Property .
+
+rdfs:range a rdf:Property ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "range" ;
+  rdfs:comment "A range of the subject property." ;
+  rdfs:range rdfs:Class ;
+  rdfs:domain rdf:Property .
+
+rdfs:seeAlso a rdf:Property ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "seeAlso" ;
+  rdfs:comment "Further information about the subject resource." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:domain rdfs:Resource .
+
+rdfs:isDefinedBy a rdf:Property ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:subPropertyOf rdfs:seeAlso ;
+  rdfs:label "isDefinedBy" ;
+  rdfs:comment "The defininition of the subject resource." ;
+  rdfs:range rdfs:Resource ;
+  rdfs:domain rdfs:Resource .
+
+rdfs:Literal a rdfs:Class ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "Literal" ;
+  rdfs:comment "The class of literal values, eg. textual strings and integers." ;
+  rdfs:subClassOf rdfs:Resource .
+
+rdfs:Container a rdfs:Class ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "Container" ;
+  rdfs:subClassOf rdfs:Resource ;
+  rdfs:comment "The class of RDF containers." .
+
+rdfs:ContainerMembershipProperty a rdfs:Class ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "ContainerMembershipProperty" ;
+  rdfs:comment """The class of container membership properties, rdf:_1, rdf:_2, ...,
+                    all of which are sub-properties of 'member'.""" ;
+  rdfs:subClassOf rdf:Property .
+
+rdfs:member a rdf:Property ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "member" ;
+  rdfs:comment "A member of the subject resource." ;
+  rdfs:domain rdfs:Resource ;
+  rdfs:range rdfs:Resource .
+
+rdfs:Datatype a rdfs:Class ;
+  rdfs:isDefinedBy <http://www.w3.org/2000/01/rdf-schema#> ;
+  rdfs:label "Datatype" ;
+  rdfs:comment "The class of RDF datatypes." ;
+  rdfs:subClassOf rdfs:Class .
+
+<http://www.w3.org/2000/01/rdf-schema#> rdfs:seeAlso <http://www.w3.org/2000/01/rdf-schema-more> .
